@@ -1,0 +1,8 @@
+.footer.container
+  %ul.nav.justify-content-end
+    %li.nav-item
+      = link_to_newsletter(title: 'Newsletter', html_options: {class: 'nav-link'})
+    %li.nav-item
+      = link_to 'Datenschutzerklärung', '/privacy', class: 'nav-link'
+    %li.nav-item
+      = link_to 'Impressum', '/imprint', class: 'nav-link'
