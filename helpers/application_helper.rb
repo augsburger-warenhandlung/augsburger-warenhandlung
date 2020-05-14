@@ -17,7 +17,7 @@ def link_to_newsletter(title: 'Newsletter', html_options: {})
 
   link_to(
     title,
-    'https://augsburger-warenhandlung.us18.list-manage.com/subscribe/post?u=0375003d35a145b49438cd77f&amp;id=b47eb0535bg',
+    'http://eepurl.com/g3BqKX',
     **html_options
   )
 end
