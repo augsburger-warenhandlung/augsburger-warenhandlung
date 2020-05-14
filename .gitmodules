@@ -1,0 +1,3 @@
+[submodule "build"]
+	path = build
+	url = git@augsburger-warenhandlung.github.com:augsburger-warenhandlung/augsburger-warenhandlung.github.io.git
