@@ -13,15 +13,15 @@ task :publish do
 
   commit_message = "Build #{Time.now}"
 
-  p Open3.capture3('bundle exec middleman build')
+  Open3.capture3('bundle exec middleman build')
 
-  p Open3.capture3('git add .', chdir: 'build')
-  p Open3.capture3('git commit', '-m', commit_message, chdir: 'build')
-  p Open3.capture3('git push', chdir: 'build')
-  p Open3.capture3('git add build', chdir: 'build')
+  Open3.capture3('git add .', chdir: 'build')
+  Open3.capture3('git', 'commit', '-m', commit_message, chdir: 'build')
+  Open3.capture3('git push', chdir: 'build')
 
-  p Open3.capture3('git commit', '-m', commit_message)
-  p Open3.capture3('git push')
+  Open3.capture3('git add build')
+  Open3.capture3('git', 'commit', '-m', commit_message)
+  Open3.capture3('git push')
 
   puts 'New version published'
 end
