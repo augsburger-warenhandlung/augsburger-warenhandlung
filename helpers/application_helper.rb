@@ -9,6 +9,14 @@ def active_nav_item?(page)
   end
 end
 
+def mail_to(email, html_options: {})
+  link_to(
+    email,
+    "mailto:#{email}",
+    **html_options
+  )
+end
+
 def link_to_newsletter(title: 'Newsletter', html_options: {})
   html_options.reverse_merge(
     target: '_blank',
